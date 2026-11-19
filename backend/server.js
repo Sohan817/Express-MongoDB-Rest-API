@@ -6,6 +6,8 @@ const port = process.env.PORT || 5000;
 
 const app = express();
 
+app.use("/api/goals", require("./routes/goalsRoutes.js"));
+
 app.listen(port, () => {
   console.log(`Server is listening at port ${port}`);
 });
